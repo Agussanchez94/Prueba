@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.sistemaReservas.reservasController">
+   <children>
+      <TableView fx:id="tablaHabitaciones" layoutX="22.0" layoutY="186.0" prefHeight="200.0" prefWidth="236.0">
+        <columns>
+          <TableColumn fx:id="colNumero" prefWidth="75.0" text="Numero" />
+          <TableColumn fx:id="colTipo" prefWidth="75.0" text="Tipo" />
+            <TableColumn fx:id="colOcupada" prefWidth="69.0" text="Ocupada" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tablaHistorial" layoutX="348.0" layoutY="186.0" prefHeight="200.0" prefWidth="236.0">
+        <columns>
+          <TableColumn fx:id="colHabitacion" prefWidth="75.0" text="Habitacion" />
+          <TableColumn fx:id="colCliente" prefWidth="75.0" text="Cliente" />
+            <TableColumn fx:id="colFecha" prefWidth="75.0" text="Fecha" />
+        </columns>
+      </TableView>
+      <Button layoutX="97.0" layoutY="141.0" mnemonicParsing="false" onAction="#reservar" text="Reservar" />
+      <Button layoutX="273.0" layoutY="200.0" mnemonicParsing="false" onAction="#liberar" text="Liberar" />
+      <ComboBox fx:id="cbxCliente" layoutX="57.0" layoutY="90.0" prefWidth="150.0" promptText="Elegir cliente" />
+      <Button layoutX="253.0" layoutY="69.0" mnemonicParsing="false" onAction="#nuevoCliente" text="Nuevo cliente" />
+      <TextField fx:id="txtFecha" layoutX="52.0" layoutY="42.0" promptText="Fecha de reserva" />
+      <Label fx:id="lblMensaje" layoutX="210.0" layoutY="146.0" text="-" />
+      <Button layoutX="248.0" layoutY="104.0" mnemonicParsing="false" onAction="#eliminarCliente" text="Eliminar cliente" />
+   </children>
+</AnchorPane>
